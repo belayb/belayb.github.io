@@ -14,6 +14,7 @@ img {
 }
 
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -27,26 +28,35 @@ header {
   column-count: 1;
 }
 
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
+.topnav {
+  overflow: hidden;
+  background-color: #333;
 }
 
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 
 article {
   float: left;
   padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
+  width: 100%;
+  background-color: white;
   height: 300px; /* only for demonstration, should be removed */
 }
 
@@ -66,16 +76,16 @@ footer {
   color: white;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
 </style>
 </head>
 <body>
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="Research.html">Research</a>
+            <a href="#contact">Teaching & talks</a>
+            <a href="#publication.html">Publication</a>
+            <a href="#contact">Contact</a>
+          </div>
     <header>
         <img src="myimage1.jpg" alt="myimage" style="width:200px">
         <h1>Belay Birlie Yimer</h1>
